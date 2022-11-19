@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "actor-input-ui-playground",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "generate": "node scripts/generate-input-schema.js",
+    "vis": "apify vis",
+    "push": "apify push"
+  },
+  "author": "Pavel 'Strajk' Dolecek <strajk@me.com> (https://www.strajk.me)",
+  "license": "ISC",
+  "dependencies": {
+    "apify": "~0.21.8"
+  }
+}

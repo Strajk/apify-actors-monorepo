@@ -1,0 +1,17 @@
+# Beware: works only in VSCode
+# Bewera: not enforced at CI 
+# https://semgrep.dev/playground/s/strajk:apify-actor-custom-init?editorMode=advanced
+rules:
+  - id: apify-actor-custom-init
+    message: Do not forget custom init() inside Actor.main()
+    languages:
+      - javascript
+    severity: WARNING
+    patterns:
+      - pattern: |
+          Actor.main(...)
+      - pattern-not: |
+          Actor.main(async () => {
+            ...
+            await init(...)
+          })

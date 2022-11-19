@@ -1,0 +1,405 @@
+{
+  "title": "Inspector input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "enumBasic": {
+      "title": "enumBasic",
+      "description": "enumBasic",
+      "type": "string",
+      "editor": "select",
+      "enum": [
+        "one",
+        "two",
+        "three"
+      ]
+    },
+    "enumDefault": {
+      "title": "enumDefault",
+      "description": "enumDefault",
+      "type": "string",
+      "editor": "select",
+      "enum": [
+        "one",
+        "two",
+        "three"
+      ],
+      "default": "three"
+    },
+    "enumPrefill": {
+      "title": "enumPrefill",
+      "description": "enumPrefill",
+      "type": "string",
+      "editor": "select",
+      "enum": [
+        "one",
+        "two",
+        "three"
+      ],
+      "prefill": "three"
+    },
+    "enumExample": {
+      "title": "enumExample",
+      "description": "enumExample",
+      "type": "string",
+      "editor": "select",
+      "enum": [
+        "one",
+        "two",
+        "three"
+      ],
+      "example": "three"
+    },
+    "enumNullable": {
+      "title": "enumNullable",
+      "description": "enumNullable",
+      "type": "string",
+      "editor": "select",
+      "enum": [
+        "one",
+        "two",
+        "three"
+      ],
+      "nullable": true
+    },
+    "enumNullableNot": {
+      "title": "enumNullableNot",
+      "description": "enumNullableNot",
+      "type": "string",
+      "editor": "select",
+      "enum": [
+        "one",
+        "two",
+        "three"
+      ],
+      "nullable": false
+    },
+    "enumTitles": {
+      "title": "enumTitles",
+      "description": "enumTitles",
+      "type": "string",
+      "editor": "select",
+      "enum": [
+        "one",
+        "two",
+        "three"
+      ],
+      "enumTitles": [
+        "One",
+        "Two",
+        "Three"
+      ]
+    },
+    "stringBasic": {
+      "title": "stringBasic",
+      "description": "stringBasic",
+      "type": "string",
+      "editor": "textfield"
+    },
+    "stringDefault": {
+      "title": "stringDefault",
+      "description": "stringDefault",
+      "type": "string",
+      "editor": "textfield",
+      "default": "default value"
+    },
+    "stringPrefill": {
+      "title": "stringPrefill",
+      "description": "stringPrefill",
+      "type": "string",
+      "editor": "textfield",
+      "prefill": "prefill value"
+    },
+    "stringExample": {
+      "title": "stringExample",
+      "description": "stringExample",
+      "type": "string",
+      "editor": "textfield",
+      "example": "example value"
+    },
+    "stringMin": {
+      "title": "stringMin",
+      "description": "stringMin",
+      "type": "string",
+      "editor": "textfield",
+      "minLength": 3
+    },
+    "stringMax": {
+      "title": "stringMax",
+      "description": "stringMax",
+      "type": "string",
+      "editor": "textfield",
+      "maxLength": 8
+    },
+    "stringMinMax": {
+      "title": "stringMinMax",
+      "description": "stringMinMax",
+      "type": "string",
+      "editor": "textfield",
+      "minLength": 3,
+      "maxLength": 8
+    },
+    "stringEditorJavascript": {
+      "title": "stringEditorJavascript",
+      "description": "stringEditorJavascript",
+      "type": "string",
+      "editor": "javascript"
+    },
+    "stringEditorPython": {
+      "title": "stringEditorPython",
+      "description": "stringEditorPython",
+      "type": "string",
+      "editor": "python"
+    },
+    "stringEditorTextarea": {
+      "title": "stringEditorTextarea",
+      "description": "stringEditorTextarea",
+      "type": "string",
+      "editor": "textarea"
+    },
+    "arrayStringListBasic": {
+      "title": "arrayStringListBasic",
+      "description": "arrayStringListBasic",
+      "type": "array",
+      "editor": "stringList"
+    },
+    "arrayStringListNullable": {
+      "title": "arrayStringListNullable",
+      "description": "arrayStringListNullable",
+      "type": "array",
+      "editor": "stringList",
+      "nullable": true
+    },
+    "arrayStringListDefault": {
+      "title": "arrayStringListDefault",
+      "description": "arrayStringListDefault",
+      "type": "array",
+      "editor": "stringList",
+      "default": [
+        "default"
+      ]
+    },
+    "arrayStringListPrefill": {
+      "title": "arrayStringListPrefill",
+      "description": "arrayStringListPrefill",
+      "type": "array",
+      "editor": "stringList",
+      "prefill": [
+        "prefill"
+      ]
+    },
+    "arrayStringListExample": {
+      "title": "arrayStringListExample",
+      "description": "arrayStringListExample",
+      "type": "array",
+      "editor": "stringList",
+      "example": [
+        "example"
+      ]
+    },
+    "arrayStringListMinMax": {
+      "title": "arrayStringListMinMax",
+      "description": "arrayStringListMinMax",
+      "type": "array",
+      "editor": "stringList",
+      "minItems": 3,
+      "maxItems": 5
+    },
+    "arrayStringListUnique": {
+      "title": "arrayStringListUnique",
+      "description": "arrayStringListUnique",
+      "type": "array",
+      "editor": "stringList",
+      "uniqueItems": true
+    },
+    "arrayStringListPatternKey": {
+      "title": "arrayStringListPatternKey",
+      "description": "arrayStringListPatternKey",
+      "type": "array",
+      "editor": "stringList",
+      "patternKey": "/^a.*z$/"
+    },
+    "arrayStringListPatternValue": {
+      "title": "arrayStringListPatternValue",
+      "description": "arrayStringListPatternValue",
+      "type": "array",
+      "editor": "stringList",
+      "patternValue": "/^a.*z$/"
+    },
+    "arrayStringListPatternKeyValue": {
+      "title": "arrayStringListPatternKeyValue",
+      "description": "arrayStringListPatternKeyValue",
+      "type": "array",
+      "editor": "stringList",
+      "patternKey": "/^a.*z$/",
+      "patternValue": "/^a.*z$/"
+    },
+    "arrayJsonBasic": {
+      "title": "arrayJsonBasic",
+      "description": "arrayJsonBasic",
+      "type": "array",
+      "editor": "json"
+    },
+    "arrayRequestListSourcesListBasic": {
+      "title": "arrayRequestListSourcesListBasic",
+      "description": "arrayRequestListSourcesListBasic",
+      "type": "array",
+      "editor": "requestListSources"
+    },
+    "arrayPseudoUrlsBasic": {
+      "title": "arrayPseudoUrlsBasic",
+      "description": "arrayPseudoUrlsBasic",
+      "type": "array",
+      "editor": "pseudoUrls"
+    },
+    "arrayKeyValueBasic": {
+      "title": "arrayKeyValueBasic",
+      "description": "arrayKeyValueBasic",
+      "type": "array",
+      "editor": "keyValue"
+    },
+    "arrayKeyValuePlacehoder": {
+      "title": "arrayKeyValuePlacehoder",
+      "description": "arrayKeyValuePlacehoder",
+      "type": "array",
+      "editor": "keyValue",
+      "placeholderKey": "some key",
+      "placeholderValue": "some value"
+    },
+    "arrayKeyValuePatternKey": {
+      "title": "arrayKeyValuePatternKey",
+      "description": "arrayKeyValuePatternKey",
+      "type": "array",
+      "editor": "keyValue",
+      "patternKey": "/^a.*z$/"
+    },
+    "arrayKeyValuePatternValue": {
+      "title": "arrayKeyValuePatternValue",
+      "description": "arrayKeyValuePatternValue",
+      "type": "array",
+      "editor": "keyValue",
+      "patternValue": "/^a.*z$/"
+    },
+    "arrayKeyValuePatternKeyValue": {
+      "title": "arrayKeyValuePatternKeyValue",
+      "description": "arrayKeyValuePatternKeyValue",
+      "type": "array",
+      "editor": "keyValue",
+      "patternKey": "/^a.*z$/",
+      "patternValue": "/^a.*z$/"
+    },
+    "objectJsonBasic": {
+      "title": "objectJsonBasic",
+      "description": "objectJsonBasic",
+      "type": "object",
+      "editor": "json"
+    },
+    "objectJsonPatternKey": {
+      "title": "objectJsonPatternKey",
+      "description": "objectJsonPatternKey",
+      "type": "object",
+      "editor": "json",
+      "patternKey": "/^a.*z$/"
+    },
+    "objectJsonPatternValue": {
+      "title": "objectJsonPatternValue",
+      "description": "objectJsonPatternValue",
+      "type": "object",
+      "editor": "json",
+      "patternValue": "/^a.*z$/"
+    },
+    "objectJsonPatternKeyValue": {
+      "title": "objectJsonPatternKeyValue",
+      "description": "objectJsonPatternKeyValue",
+      "type": "object",
+      "editor": "json",
+      "patternKey": "/^a.*z$/",
+      "patternValue": "/^a.*z$/"
+    },
+    "objectJsonMinMax": {
+      "title": "objectJsonMinMax",
+      "description": "objectJsonMinMax",
+      "type": "object",
+      "editor": "json",
+      "minProperties": 2,
+      "maxProperties": 5
+    },
+    "objectProxyBasic": {
+      "title": "objectProxyBasic",
+      "description": "objectProxyBasic",
+      "type": "object",
+      "editor": "proxy"
+    },
+    "integerBasic": {
+      "title": "integerBasic",
+      "description": "integerBasic",
+      "type": "integer"
+    },
+    "integerDefault": {
+      "title": "integerDefault",
+      "description": "integerDefault",
+      "type": "integer",
+      "default": 7
+    },
+    "integerPrefill": {
+      "title": "integerPrefill",
+      "description": "integerPrefill",
+      "type": "integer",
+      "prefill": 7
+    },
+    "integerExample": {
+      "title": "integerExample",
+      "description": "integerExample",
+      "type": "integer",
+      "example": 7
+    },
+    "integerMin": {
+      "title": "integerMin",
+      "description": "integerMin",
+      "type": "integer",
+      "minimum": 3
+    },
+    "integerMax": {
+      "title": "integerMax",
+      "description": "integerMax",
+      "type": "integer",
+      "maximum": 10
+    },
+    "integerMinMax": {
+      "title": "integerMinMax",
+      "description": "integerMinMax",
+      "type": "integer",
+      "minimum": 3,
+      "maximum": 10
+    },
+    "integerUnit": {
+      "title": "integerUnit",
+      "description": "integerUnit",
+      "type": "integer",
+      "unit": "KB"
+    },
+    "booleanBasic": {
+      "title": "booleanBasic",
+      "description": "booleanBasic",
+      "type": "boolean"
+    },
+    "booleanDefault": {
+      "title": "booleanDefault",
+      "description": "booleanDefault",
+      "type": "boolean",
+      "default": true
+    },
+    "booleanExample": {
+      "title": "booleanExample",
+      "description": "booleanExample",
+      "type": "boolean",
+      "example": true
+    },
+    "booleanGroup": {
+      "title": "booleanGroup",
+      "description": "booleanGroup",
+      "type": "boolean",
+      "groupCaption": "test group caption"
+    }
+  }
+}

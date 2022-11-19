@@ -1,0 +1,7 @@
+{
+  "name": "@apify-actors-monorepo/shared",
+  "private": true,
+  "dependencies": {
+    "remove-accents": "^0.4.2"
+  }
+}
