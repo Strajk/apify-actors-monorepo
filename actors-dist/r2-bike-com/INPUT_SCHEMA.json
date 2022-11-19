@@ -1,0 +1,54 @@
+{
+  "title": "r2-bike (r2-bike.com) scraper",
+  "description": "Scrapes products titles, prices, images and availability. Does NOT scrape product details. Uses Crawlee (Apify v3).",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "description": "",
+      "type": "string",
+      "editor": "select",
+      "default": "TEST",
+      "prefill": "TEST",
+      "enum": [
+        "TEST",
+        "FULL"
+      ],
+      "enumTitles": [
+        "TEST",
+        "FULL"
+      ]
+    },
+    "APIFY_DONT_STORE_IN_DATASET": {
+      "sectionCaption": "Advanced",
+      "sectionDescription": "Advanced options, use only if you know what you're doing.",
+      "title": "Don't store in dataset",
+      "description": "If set to true, the actor will not store the results in the default dataset. Useful when using alternative storage, like own database",
+      "type": "boolean",
+      "default": false,
+      "editor": "checkbox"
+    },
+    "PG_CONNECTION_STRING_NORMALIZED": {
+      "title": "Postgres connection string for normalized data",
+      "description": "If set, actor will store normalized data in Postgres database in PG_DATA_TABLE and PG_DATA_PRICE_TABLE tables",
+      "type": "string",
+      "editor": "textfield"
+    },
+    "PG_DATA_TABLE": {
+      "title": "Postgres table name for product data",
+      "description": "Table name for storing product name, url, image, ...",
+      "type": "string",
+      "editor": "textfield"
+    },
+    "PG_DATA_PRICE_TABLE": {
+      "title": "Postgres table name for price data",
+      "description": "Table name for storing price, original price, stock status, ...",
+      "type": "string",
+      "editor": "textfield"
+    }
+  },
+  "required": [
+    "mode"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "r2-bike-r2-bike-com-scraper",
+  "description": "Scrapes products titles, prices, images and availability. Does NOT scrape product details. Uses Crawlee (Apify v3).",
+  "type": "module",
+  "scripts": {
+    "start": "node ./main.js",
+    "push-to-apify-platform": "npx apify push"
+  },
+  "dependencies": {
+    "apify3": "npm:apify@^3.0.2",
+    "crawlee": "*",
+    "@crawlee/core": "*",
+    "playwright": "*",
+    "pg": "*",
+    "pg-connection-string": "*",
+    "dotenv": "*",
+    "find-config": "*",
+    "@elastic/elasticsearch": "*",
+    "filenamify": "*"
+  },
+  "apify": {
+    "title": "r2-bike (r2-bike.com) scraper",
+    "description": "Scrapes products titles, prices, images and availability. Does NOT scrape product details. Uses Crawlee (Apify v3).",
+    "isPublic": true,
+    "isDeprecated": false,
+    "isAnonymouslyRunnable": true,
+    "notice": "",
+    "pictureUrl": "",
+    "seoTitle": "",
+    "seoDescription": "",
+    "categories": [
+      "ECOMMERCE"
+    ]
+  }
+}
