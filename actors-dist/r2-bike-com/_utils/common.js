@@ -201,7 +201,9 @@ export async function save (objs) {
       objExtended.__APIFY_ACTOR_BUILD_ID = process.env.APIFY_ACTOR_BUILD_ID
       objExtended.__APIFY_ACTOR_BUILD_NUMBER = process.env.APIFY_ACTOR_BUILD_NUMBER
       objExtended.__APIFY_ACTOR_TASK_ID = process.env.APIFY_ACTOR_TASK_ID
-      if (process.env.APIFY_DONT_STORE_IN_DATASET !== true) await Dataset.pushData(obj)
+      if (process.env.APIFY_DONT_STORE_IN_DATASET !== `true`) { // Note: dotenv is not casting vars, so they are strings
+        await Dataset.pushData(obj)
+      }
     }
     return objExtended
   })
