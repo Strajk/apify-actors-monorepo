@@ -1,6 +1,6 @@
 {
-  "title": "r2-bike (r2-bike.com) scraper",
-  "description": "Scrapes products titles, prices, images and availability. Does NOT scrape product details. Uses Crawlee (Apify v3).",
+  "title": "Bike24 (bike24.de) scraper",
+  "description": "Scrapes products titles, prices, images and availability. Does NOT scrape product details.",
   "type": "object",
   "schemaVersion": 1,
   "properties": {
@@ -16,9 +16,34 @@
         "FULL"
       ],
       "enumTitles": [
-        "TEST",
+        "TEST mode (scrapes only few categories)",
         "FULL"
       ]
+    },
+    "proxyConfiguration": {
+      "title": "Proxy configuration",
+      "description": "Select proxies to be used by your actor.",
+      "type": "object",
+      "editor": "proxy",
+      "default": {
+        "useApifyProxy": true,
+        "apifyProxyGroups": [
+          "RESIDENTIAL"
+        ]
+      },
+      "prefill": {
+        "useApifyProxy": true,
+        "apifyProxyGroups": [
+          "RESIDENTIAL"
+        ]
+      }
+    },
+    "debug": {
+      "title": "Debug",
+      "description": "Debug mode prints more logs, disables concurrency and other optimizations.",
+      "type": "boolean",
+      "editor": "checkbox",
+      "default": false
     },
     "APIFY_USE_MEMORY_REQUEST_QUEUE": {
       "sectionCaption": "Advanced",

@@ -608,6 +608,7 @@ class ActorVisitor extends Visitor {
   }
 })()
 
+// https://raw.githubusercontent.com/apify/apify-shared-js/master/packages/input_schema/src/schema.json
 function tsTypeToJsonSchema ({ kind, example }, key) {
   if (Array.isArray(kind)) {
     // Either:
@@ -661,6 +662,16 @@ function tsTypeToJsonSchema ({ kind, example }, key) {
     case `number`:
       return `number`
     case `object`:
+      if (key === `proxyConfiguration`) {
+        return {
+          title: `Proxy configuration`,
+          description: `Select proxies to be used by your actor.`,
+          type: `object`,
+          editor: `proxy`,
+          default: { useApifyProxy: true, apifyProxyGroups: [`RESIDENTIAL`] },
+          prefill: { useApifyProxy: true, apifyProxyGroups: [`RESIDENTIAL`] },
+        }
+      }
       return `object`
     case `array`:
       if (key === `urls`) {

@@ -1,6 +1,6 @@
 {
-  "name": "r2-bike-r2-bike-com-scraper",
-  "description": "Scrapes products titles, prices, images and availability. Does NOT scrape product details. Uses Crawlee (Apify v3).",
+  "name": "bike24-bike24-de-scraper",
+  "description": "Scrapes products titles, prices, images and availability. Does NOT scrape product details.",
   "type": "module",
   "scripts": {
     "start": "node ./main.js",
@@ -9,8 +9,8 @@
   "dependencies": {
     "apify3": "npm:apify@^3.0.2",
     "crawlee": "*",
-    "@crawlee/core": "*",
     "playwright": "*",
+    "@crawlee/core": "*",
     "pg": "*",
     "pg-connection-string": "*",
     "dotenv": "*",
@@ -20,8 +20,8 @@
     "@crawlee/memory-storage": "*"
   },
   "apify": {
-    "title": "r2-bike (r2-bike.com) scraper",
-    "description": "Scrapes products titles, prices, images and availability. Does NOT scrape product details. Uses Crawlee (Apify v3).",
+    "title": "Bike24 (bike24.de) scraper",
+    "description": "Scrapes products titles, prices, images and availability. Does NOT scrape product details.",
     "isPublic": true,
     "isDeprecated": false,
     "isAnonymouslyRunnable": true,

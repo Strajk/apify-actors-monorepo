@@ -1,0 +1,11 @@
+{
+  "name": "bike24-bike24-de-scraper",
+  "version": "0.1",
+  "buildTag": "latest",
+  "env": null,
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 3600,
+    "memoryMbytes": 4096
+  }
+}

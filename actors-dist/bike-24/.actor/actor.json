@@ -1,0 +1,77 @@
+{
+  "actorSpecification": 1,
+  "name": "bike24-bike24-de-scraper",
+  "title": "Bike24 (bike24.de) scraper",
+  "description": "Scrapes products titles, prices, images and availability. Does NOT scrape product details.",
+  "version": "0.1.0",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "title": "Bike24 (bike24.de) scraper",
+      "description": "Scrapes products titles, prices, images and availability. Does NOT scrape product details.",
+      "views": {
+        "overview": {
+          "title": "Overview",
+          "description": "Overview of the most important fields",
+          "transformation": {
+            "fields": [
+              "pid",
+              "name",
+              "url",
+              "img",
+              "inStock",
+              "currentPrice",
+              "originalPrice",
+              "currency"
+            ]
+          },
+          "display": {
+            "component": "table",
+            "columns": [
+              {
+                "label": "Pid",
+                "field": "pid",
+                "format": "text"
+              },
+              {
+                "label": "Name",
+                "field": "name",
+                "format": "text"
+              },
+              {
+                "label": "Url",
+                "field": "url",
+                "format": "link"
+              },
+              {
+                "label": "Img",
+                "field": "img",
+                "format": "image"
+              },
+              {
+                "label": "In Stock",
+                "field": "inStock",
+                "format": "boolean"
+              },
+              {
+                "label": "Current Price",
+                "field": "currentPrice",
+                "format": "number"
+              },
+              {
+                "label": "Original Price",
+                "field": "originalPrice",
+                "format": "number"
+              },
+              {
+                "label": "Currency",
+                "field": "currency",
+                "format": "text"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
