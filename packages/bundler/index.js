@@ -142,12 +142,12 @@ class ActorVisitor extends Visitor {
       return
     }
     const members = node.members.map(x => {
-        const value =
+      const value =
           x.init.value ??
           x.init.quasis[`0`].cooked
-        const { title } = extractSmartComments(this._rawFile, x.span.end)
-        return { value, title }
-      },
+      const { title } = extractSmartComments(this._rawFile, x.span.end)
+      return { value, title }
+    },
     ) // [ { value: "FULL", value: "TEST", value: "SINGLE" } ]
     this._collector[id] = members // Better ENUM
     return super.visitTsEnumDeclaration(node)
@@ -496,12 +496,21 @@ class ActorVisitor extends Visitor {
       }
       return acc
     }, {})
+
+    inputSchemaProperties[`APIFY_USE_MEMORY_REQUEST_QUEUE`] = {
+      sectionCaption: `Advanced`,
+      sectionDescription: `Advanced options, use only if you know what you're doing.`,
+
+      title: `Use in-memory request queue instead of the native one`,
+      description: `In-memory request queue can reduce costs, but it may case issues with longer runs due to non-persistence.`,
+      type: `boolean`,
+      default: false,
+      editor: `checkbox`,
+    }
+
     // TODO: Refactor! This is very specific!
     if (collector[`actor.base`] === `hlidac-shopu`) {
       inputSchemaProperties[`APIFY_DONT_STORE_IN_DATASET`] = {
-        sectionCaption: `Advanced`,
-        sectionDescription: `Advanced options, use only if you know what you're doing.`,
-
         title: `Don't store in dataset`,
         description: `If set to true, the actor will not store the results in the default dataset. Useful when using alternative storage, like own database`,
         type: `boolean`,
@@ -598,7 +607,6 @@ class ActorVisitor extends Visitor {
     ), JSON.stringify(collector, null, 2))
   }
 })()
-
 
 function tsTypeToJsonSchema ({ kind, example }, key) {
   if (Array.isArray(kind)) {

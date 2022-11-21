@@ -9,7 +9,8 @@ import { config } from 'dotenv'
 import findConfig from "find-config"
 import { Client as ElasticClient } from "@elastic/elasticsearch"
 import filenamify from 'filenamify'
-import { Dataset } from 'crawlee'
+import { Configuration, Dataset } from 'crawlee'
+import { MemoryStorage } from '@crawlee/memory-storage'
 
 config({ path: findConfig(`.env`) })
 
@@ -37,6 +38,10 @@ export async function init ({ actorNameOverride }, restInput) {
     const gitCommit = fs.readFileSync(path.join(process.cwd(), `..`, `.git/refs/heads/${gitBranch}`), `utf8`)
     const gitCommitShort = gitCommit.substring(0, 7)
     globalLogsProps.__GIT_COMMIT = gitCommitShort
+  }
+
+  if (process.env.APIFY_USE_MEMORY_REQUEST_QUEUE === `true`) { // dotenv -> bool-like vars are strings
+    Configuration.getGlobalConfig().useStorageClient(new MemoryStorage())
   }
 
   if (process.env.APIFY_IS_AT_HOME) {
