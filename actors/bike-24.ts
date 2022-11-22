@@ -4,7 +4,6 @@
  * @dockerfileTemplate: Playwright
  * @apify.categories: ECOMMERCE
  * @apify.isPublic: true
- * @strajk:hlidac-shopu-support: 2022-09-07
  * @actor.base: hlidac-shopu
  * @protection: Cloudflare
  * */

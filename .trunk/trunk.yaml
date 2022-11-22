@@ -8,14 +8,14 @@ plugins:
       uri: https://github.com/trunk-io/plugins
 lint:
   enabled:
+    # - eslint@8.28.0 - using native ESLint
     # - hadolint@2.12.0
-    # - eslint@8.28.0
+    - semgrep
     - gitleaks@8.11.2
     # - markdownlint@0.32.2
     # - git-diff-check
 runtimes:
   enabled:
-    # - go@1.18.3
     - go@1.18.3
     - node@16.14.2
 actions:
