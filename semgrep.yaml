@@ -1,5 +1,5 @@
 # Beware: works only in VSCode
-# Bewera: not enforced at CI 
+# Bewera: not enforced at CI
 # https://semgrep.dev/playground/s/strajk:apify-actor-custom-init?editorMode=advanced
 rules:
   - id: apify-actor-custom-init
@@ -15,3 +15,6 @@ rules:
             ...
             await init(...)
           })
+
+# TODO
+# - consistent logging for e-commerce (hlidac-shopu) scrapers
