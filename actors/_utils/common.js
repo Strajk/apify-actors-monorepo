@@ -191,7 +191,7 @@ export async function save (objs) {
   if (!Array.isArray(objs)) objs = [objs]
   if (objs.length === 0) return console.log(`No data to save.`)
 
-  const objsExtended = objs.map(async (obj) => {
+  const objsExtended = await Promise.all(objs.map(async (obj) => {
     const objExtended = {
       ...obj,
       actorName,
@@ -211,7 +211,8 @@ export async function save (objs) {
       }
     }
     return objExtended
-  })
+  }))
+
   // if runs on local machine (MacOS)
   if (os.platform() === `darwin`) {
     const cwd = process.cwd() // ~/Projects/apify-actors-monorepo/actors
