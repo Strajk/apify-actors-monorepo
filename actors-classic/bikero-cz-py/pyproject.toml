@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "bikero-cz-py"
+version = "0.1.0"
+description = "bikero.cz scraper"
+authors = ["Pavel 'Strajk' Dolecek <strajk@me.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+scrapy = "^2.8.0"
+price-parser = "^0.3.4"
+python-dotenv = "^1.0.0"
+psycopg = "^3.1.8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+# TODO: Maybe simplify this? is there some "recommended" way?
+select = [
+  "I", # import sorting
+  "E", # pycodestyle https://pypi.org/project/pycodestyle/
+  "F", # pyflakes https://pypi.org/project/pyflakes/
+  "ANN", # annotations https://pypi.org/project/flake8-annotations/
+  "B", # bugbear https://pypi.org/project/flake8-bugbear/
+  "C4", # comprehensions https://pypi.org/project/flake8-comprehensions/
+  "E", # style errors
+  "ISC", # string concatenation
+  "PL", # pylint
+  "S", # security
+  "SIM", # simplify
+]
+ignore = [
+  "ANN101", # Missing type annotation for `self` in method
+]
+line-length = 120
