@@ -1,0 +1,18 @@
+{
+  "_comments": [
+    "Don't include playwright in the dependencies, it's already installed by 'parent' docker image",
+    "- reinstalling it would cause version mismatch"
+  ],
+  "dependencies": {
+    "apify": "^3.0.2",
+    "crawlee": "^3.3.0",
+    "pg": "^8.10.0",
+    "pg-connection-string": "^2.5.0",
+    "dotenv": "^16.0.3",
+    "find-config": "^1.0.0",
+    "@elastic/elasticsearch": "^8.6.0",
+    "filenamify": "^5.1.1",
+    "@crawlee/memory-storage": "^3.3.0",
+    "typescript": "^4.7.4"
+  }
+}
