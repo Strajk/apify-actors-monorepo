@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run current scraper (TS)",
+            "request": "launch",
+            "type": "node",
+            "program": "${workspaceFolder}/${relativeFile}",
+            "cwd": "${workspaceFolder}/actors/",
+            "console": "integratedTerminal",
+            "runtimeExecutable": "node",
+            "runtimeArgs": [
+                "--no-warnings",
+                "--experimental-specifier-resolution=node",
+                "--loader",
+                "ts-node/esm"
+            ],
+        }
+    ]
+}
